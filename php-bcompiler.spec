@@ -4,12 +4,13 @@
 
 Summary:	A bytecode compiler for PHP
 Name:		php-%{modname}
-Version:	0.8
-Release:	%mkrel 9
+Version:	0.9.0
+Release:	%mkrel 0.r288984.1
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/bcompiler
-Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
+#Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
+Source0:	%{modname}-0.9.x.tar.gz
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	bzip2-devel
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -27,8 +28,8 @@ protect the source code. bcompiler could be used in the following situations:
 
 %prep
 
-%setup -q -n %{modname}-%{version}
-[ "../package*.xml" != "/" ] && mv -f ../package*.xml .
+%setup -q -n %{modname}-0.9.x
+#[ "../package*.xml" != "/" ] && mv -f ../package*.xml .
 
 # lib64 fixes
 perl -pi -e "s|/lib\b|/%{_lib}|g" config.m4
@@ -78,4 +79,3 @@ rm -rf %{buildroot}
 %doc CREDITS README TODO examples/*.php
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
-
