@@ -5,7 +5,7 @@
 Summary:	A bytecode compiler for PHP
 Name:		php-%{modname}
 Version:	0.9.0
-Release:	%mkrel 0.r288984.1
+Release:	%mkrel 0.r288984.2
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/bcompiler
