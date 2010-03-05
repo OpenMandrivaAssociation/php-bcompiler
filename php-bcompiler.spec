@@ -4,7 +4,7 @@
 
 Summary:	A bytecode compiler for PHP
 Name:		php-%{modname}
-Version:	0.9.2
+Version:	0.9.3
 Release:	%mkrel 1
 Group:		Development/PHP
 License:	PHP License
