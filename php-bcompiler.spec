@@ -4,8 +4,8 @@
 
 Summary:	A bytecode compiler for PHP
 Name:		php-%{modname}
-Version:	0.9.3
-Release:	%mkrel 6
+Version:	1.0.1
+Release:	%mkrel 1
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/bcompiler
@@ -34,7 +34,7 @@ protect the source code. bcompiler could be used in the following situations:
 perl -pi -e "s|/lib\b|/%{_lib}|g" config.m4
 
 # fix attribs
-chmod 644 examples/*.php CREDITS README TODO
+chmod 644 examples/*.php CREDITS
 
 %build
 %serverbuild
@@ -75,6 +75,6 @@ rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
-%doc CREDITS README TODO examples/*.php package*.xml
+%doc CREDITS examples/*.php package*.xml
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
