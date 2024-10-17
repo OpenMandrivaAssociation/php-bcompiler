@@ -8,7 +8,7 @@ Version:	1.0.2
 Release:	%mkrel 2
 Group:		Development/PHP
 License:	PHP License
-URL:		http://pecl.php.net/package/bcompiler
+URL:		https://pecl.php.net/package/bcompiler
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	bzip2-devel
